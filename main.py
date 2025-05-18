@@ -1,5 +1,6 @@
 from tkinter import *
-import math
+import math 
+from playsound import playsound
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -70,6 +71,7 @@ def countdown(count):
         global TIMER
         TIMER = window.after(1000,countdown,count-1)
     else:
+        playsound("alarm.mp3")
         start_timer()
         num_of_check = math.floor(REP/2)
         label2.config(text="✓"*num_of_check)
