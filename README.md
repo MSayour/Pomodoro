@@ -2,6 +2,9 @@
 
 A simple desktop Pomodoro timer built with Python and Tkinter. Boost your productivity by using the Pomodoro technique — 25-minute work sessions followed by short breaks.
 
+![Game Preview](./img/app_prev.png)
+
+---
 
 ## ✅ Features
 
