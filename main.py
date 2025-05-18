@@ -1,6 +1,6 @@
 from tkinter import *
 import math 
-from playsound import playsound
+import winsound
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -22,7 +22,7 @@ def rest_timer():
     REP=1
     label2.config(text="")
 # ---------------------------- TIMER MECHANISM ------------------------------- #
-work_sec = WORK_MIN * 60
+work_sec = WORK_MIN * 0.2
 short_sec = SHORT_BREAK_MIN * 60
 long_sec = LONG_BREAK_MIN * 60
 def start_timer():
@@ -71,7 +71,7 @@ def countdown(count):
         global TIMER
         TIMER = window.after(1000,countdown,count-1)
     else:
-        playsound("alarm.mp3")
+        winsound.PlaySound("alarm.wav",winsound.SND_FILENAME)
         start_timer()
         num_of_check = math.floor(REP/2)
         label2.config(text="✓"*num_of_check)
